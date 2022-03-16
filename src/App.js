@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import DesktopPattern from "./components/DesktopPattern";
+import Header from "./components/Header";
+import Subscribe from "./components/Subscribe";
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <DesktopPattern />
+      <div className="container">
+        <main>
+          <Header />
+          <div className="contents">
+            <h1 className="title">Order Summary</h1>
+            <p className="paragraph">You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
+            <Subscribe />
+            <div className="btns">
+              <button className="payment">Proceed to Payment</button>
+              <button className="cancel">Cancel Order</button>
+            </div>
+          </div>
+        </main>
+      </div>
+    </>
   );
 }
 
